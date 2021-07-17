@@ -1,7 +1,7 @@
 # Note Taker
 
 ## Description
-An application created to ease the stress of note-taking.
+An application created to ease the stress of note-taking, highlighting GET and POST requests.
 
 ## Table of Contents
 - [Installation](#installation)
