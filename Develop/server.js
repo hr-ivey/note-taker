@@ -1,36 +1,26 @@
-// Required npm package.
+// Required npm package + path to HTML files.
 const express = require('express');
+const path = require('path');
 
-// Creating express server.  
+// Creating express server + setting up port.
 const app = express();
-
-// Setting up port.
-const PORT = process.env.PORT || 5500;
+const PORT = 5500;
 
 // It's data parsing time!
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-// Calling in data.
-const notesData = require('../db/db');
+// Calling in database.
+const notesData = require('./db/db.json');
 
-// Paths to HTML files.
-const path = require('path');
-module.exports = (app) => {
-    app.get('/notes', (req, res) => {
-      res.sendFile(path.join(__dirname, './public/notes'));
-    });
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, './public/index'));
-    });
- };
+// Routes.
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'notes.html')));
 
-// Routing, GET, and POST requests.
-module.exports = (app) => {
-    app.get('./public/notes', (req, res) => res.json(notesData));
-    app.post('./public/notes', (req, res) => res.json(notesData));
-};
+// Receive data.
+app.post('/public/notes', (req, res) => res.json(notesData));
+app.get('/public/notes', (req, res) => res.json(notesData));
 
  // Listener.
 app.listen(PORT, () => {
