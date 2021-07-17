@@ -1,7 +1,7 @@
 # Note Taker
 
 ## Description
-An application created to ease the stress of note-taking, highlighting GET and POST requests.
+An application created to ease the stress of note-taking, highlighting GET and POST requests using Express.js.node
 
 ## Table of Contents
 - [Installation](#installation)
@@ -14,7 +14,9 @@ An application created to ease the stress of note-taking, highlighting GET and P
 ## Installation
 
 ## Usage
+![Application screenshot](/screenshot.png)
 
+Deployed: https://hr-ivey.github.io/note-taker
 ## Credits
 Starter code provided by Georgia Tech Boot Camps.
 

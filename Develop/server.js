@@ -13,10 +13,14 @@ app.use(express.static('public'));
 
 // Calling in database.
 const notesData = require('./db/db.json');
+function getJson(req, res, next){
+    res.send(notesData);
+}
+console.log ("notesData");
 
 // Routes.
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'notes.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
+app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/notes.html')));
 
 // Receive data.
 app.post('/public/notes', (req, res) => res.json(notesData));
