@@ -2,7 +2,7 @@
   "name": "note-taker",
   "version": "1.0.0",
   "description": "An application created to ease the stress of note-taking, highlighting GET and POST requests using Express.js",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hr-ivey/note-taker/issues"
   },
-  "homepage": "https://github.com/hr-ivey/note-taker#readme"
+  "homepage": "https://github.com/hr-ivey/note-taker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
