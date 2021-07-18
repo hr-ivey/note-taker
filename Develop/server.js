@@ -6,7 +6,7 @@ let notesData = require('../db/db.json');
 
 // Creating express server + setting up port.
 const app = express();
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 3000;
 
 // It's data parsing time!
 app.use(express.urlencoded({ extended: true }));
