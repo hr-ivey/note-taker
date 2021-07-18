@@ -22,11 +22,11 @@ app.get('/api/notes', (req, res) => res.json(notesData));
 app.post('/api/notes', (req, res) => {
     notesData.push (req.body)
     let notes = JSON.stringify(notesData)
-    fs.writeFile(__dirname + '../db/db.json', notes, (err) => {
+    fs.writeFile(__dirname + '/../db/db.json', notes, (err) => {
         if (err) throw err;
     });
-    res.json(notesData)
-}
+    res.end();
+});
 
  // Listener.
 app.listen(PORT, () => {

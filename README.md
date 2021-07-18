@@ -12,7 +12,7 @@ An application created to ease the stress of note-taking, highlighting GET and P
 - [License](#license)
 
 ## Installation
-
+```npm i```
 ## Usage
 ![Application screenshot](/screenshot.png)
 
@@ -29,4 +29,4 @@ Starter code provided by Georgia Tech Boot Camps.
 
 ---
 ## License
---
+MIT
