@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "An application created to ease the stress of note-taking, highlighting GET and POST requests using Express.js",
   "main": "server.js",
-}
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

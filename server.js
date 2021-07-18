@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require ('fs')
-let notesData = require('../db/db.json');
+let notesData = require('./db/db.json');
 
 // Creating express server + setting up port.
 const app = express();
